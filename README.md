@@ -7,6 +7,7 @@
 
 **本模板建议配合overleaf软件使用，使用起来方便简洁。只需要将本项目整个下载为zip文件，然后上次至overleaf即可，编译时选择Xelatex。**
 
+**zjnuthesis.cls 论文的模板文件，非必要无需更改**
 
 paper.tex 论文的主文件
 
