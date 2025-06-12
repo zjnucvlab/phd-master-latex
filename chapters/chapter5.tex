@@ -1,0 +1,44 @@
+% \chapter{函数梯度流引导的退火嵌套生成对抗网络训练策略}
+\chapter{基于嵌套退火思想的泛用性增强训练策略}
+\label{chapters/chapter5/}
+
+
+\section{序言}
+近年来，\cite{goodfellow2014generative}和扩散模型（DM）--已被广泛用于图像合成及相关任务。GAN 的工作原理是从低维向量空间采样。然后将这些向量输入神经网络，通过单一的前向传播生成图像。该框架以其合成高度逼真图像的能力和快速采样过程而著称。
+
+\section{预备知识}
+
+%
+\begin{figure}[tp]
+\centering 
+\includegraphics[width=0.9\textwidth]{chapters/chapter5/anneal-cfg-idea.jpg}
+\caption{
+直观了解退火权重机制。
+\label{Fig.Intuitive}}
+\vspace{-0.2in}
+\end{figure}
+
+\subsection{退火采样算法}
+郎之万动力学采样的方法可以参考章节~\ref{s2:sampling} 郎之万动力学采样中的内容。
+而退火朗之万动力学采样（简称退火采样）是朗之万动力学采样的一种增强方法。
+
+\section{
+基于梯度流的生成对抗网络嵌套退火训练策略}
+% \section{概率密度函数的分数和生成对抗网络模型判别器梯度的联系}
+% 本节概述了所提出的方法，随后将描述其详细内容及与先前方法的关系。
+\subsection{总览}\label{overview}
+{\heiti（1）直观理解}
+
+%
+\begin{figure*}[!htb]
+\centering 
+\includegraphics[width=1\textwidth]{chapters/chapter5/nats_lsun_nd4_dg1.jpg}
+\caption{本图展示了使用NATS训练的DDGAN在$256\times256$分辨率的LSUN Church数据集上的合成样本。
+\label{Fig.nats_lsun256_nd4_1}}
+\vspace{-0.2in}
+\end{figure*}
+
+
+
+\section{小结}
+本章揭示了

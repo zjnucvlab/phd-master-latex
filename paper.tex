@@ -1,0 +1,188 @@
+%%===============================================================================================%%
+%%=================================  博士论文主框架   ===========================================%%
+%%=================================           ===========================================%%
+%%=================================         ===========================================%%
+%%=================================          ===========================================%%
+%%=================================         ===========================================%%
+%%=================================         ===========================================%%
+%%=================================         ===========================================%%
+%%=================================         ===========================================%%
+%%===============================================================================================%%
+\documentclass[twoside,doctor]{zjnuthesis}
+% 博士只需将上述一行的 master 改为 doctor
+% ==============================================================
+% ==============================================================
+
+% 自己需要增加什么 package 或修改什么设置的话，都放在这里吧。
+\usepackage{enumerate}
+% \usepackage{enumitem}
+% \setlist[description,1]{itemindent=2pt,labelsep=2pt}
+\usepackage{zhlipsum}
+% \usepackage{etoc}
+\usepackage{float}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+% \usepackage[noend]{algpseudocode}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\allowdisplaybreaks
+\raggedbottom
+\setcounter{tocdepth}{2}
+%%
+%
+%\setcounter{tocdepth}{3}：toc即table of content，表示目录显示的深度
+%\setcounter{secnumdepth}{4}：secnum即section number，表示章节编号的深度
+%其中的数字3和4表示深度，具体数字的含义如下：
+%-1 part
+%0 chapter
+%1 section
+%%2 subsection
+%3 subsubsection
+%4 paragraph
+%5 subparagraph
+%%
+%%% ========================================================================== %%
+%%% ============ 以下为封面内容，请根据实际情况填入 ========================== %%
+%%% ========================================================================== %%
+ % % 使用 tocloft 包来自定义目录格式
+\usepackage{tocloft}
+
+% % 设置不同级别标题的缩进
+\setlength{\cftchapindent}{0em}        % 章节标题不缩进
+\setlength{\cftsecindent}{2em}         % 一级节标题缩进 2em
+\setlength{\cftsubsecindent}{4em}      % 二级节标题缩进 4em
+\setlength{\cftsubsubsecindent}{6em}   % 三级节标题缩进 6em
+
+% === 中文封面内容 ===%
+% \SchoolCode{10345}         %学校代码
+\ResearchType{应用研究}    %研究类型
+\Cfdlevel{}       %密级, 博士填写
+\FirstDiscip{计算机科学与技术}    %一级学科, 博士填写
+\SecDiscip{计算机应用技术}    %二级学科, 博士填写
+\ResearchDir{机器学习与模式识别}	  %研究方向, 博士填写
+\college{计算机科学与技术学院}     %所在学院, 博士填写
+\Title{梯度流图像生成对抗网络的性能研究
+} %题目
+\SubjectMajor{计算机科学与技术}                  %学科专业
+\Grade{2020级}               %年级
+\StudentID{202010100079}     %学号
+\Graduate{万畅}             %作者
+\Advisor{李明禄、郑忠龙}     
+% \Graduate{***}             %作者
+% \Advisor{***}   
+%指导教师
+\Classification{TP391.4}      %中图分类号
+\SubmitDate{2023~年~6~月~6~日}     %硕士论文提交时间
+\submitDate{2025~年~6~月~10~日}     %博士论文提交时间
+
+% === 中英文扉面内容 ===%
+\Title{梯度流图像生成对抗网络的性能研究} %
+\EnglishTitle{\textsc{Performance study of gradient-flow-based GAN for image generation}}
+% \upperTitle{Gradient Flow Based Generative Models Research}
+% \Author{***}                               %作者
+% \EnglishAuthor{***}   
+\Author{万畅}                               %作者
+\EnglishAuthor{Chang Wan}                  %英文作者
+% \Advisor{李明禄，郑忠龙}                              %导师
+\EnglishAdvisor{Minglu Li, Zhonglong Zheng}     %英文导师
+% \Advisor{***}                              %导师
+% \EnglishAdvisor{***}    
+\Major{计算机科学与技术}                              %专业
+\EnglishMajor{Computer Science and Technology}      %英文专业
+\Degree{工学博士}                                 %学位
+\EnglishDegree{Doctor of Engineering}                       %英文学位
+\Institute{浙江师范大学}                      %授予单位
+\EnglishInstitute{Zhejiang Normal University} %英文授予单位
+
+\begin{document}
+\newcommand{\ch}{\omega}
+\newcommand{\nch}{\omega^*}
+\newtheorem{observation}{观察}
+\newtheorem{conjecture}{猜想}
+\newtheorem*{claim}{断言}
+\newtheorem{Remark}{注记}
+\newtheorem{question}{问题}
+% \newtheorem{technique}{技术}
+\newtheorem{technique}[theorem]{\Heiti 技术}
+
+% \newtheorem{algorithm}{算法}
+\newtheorem{assumption}{\Heiti 假设}
+% \newtheorem{proposition}{命题}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\counterwithin{algorithm}{chapter}
+
+\floatname{algorithm}{算法}  % 将 "Algorithm" 改为 "算法"
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}
+
+\let\cleardoublepage\clearpage % 去除空白页
+%=== 显示格式化中英文扉面 ===%
+% \makeenglishtitle
+
+% === 显示格式化封面 ===%
+\maketitlecn
+
+% === 显示格式化中英文扉面 ===%
+\maketitleen
+%%===========================================================================%%
+%%========================= 目录部分 ========================================%%
+%%===========================================================================%%
+
+\frontmatter
+% %把页码切换成罗马数字格式，并且不再对章进行自动编号
+%   %=== 摘要 ===%
+  \include{chapters/abstract}
+
+%   %=== 目录 ===%
+  \tableofcontents
+
+%   %=== 表格目录 ===%
+  % \listoftables
+
+%   %=== 插图目录 ===%
+  % \listoffigures
+
+
+% %%===========================================================================%%
+% %%========================= 正文部分 ========================================%%
+% %%===========================================================================%%
+
+% %把页码切换成阿拉伯数字，并对章进行自动编号
+\mainmatter
+
+%   %=== 章节 ===%
+  \include{chapters/chapter1}
+  \include{chapters/chapter2}
+  \include{chapters/chapter3}
+  \include{chapters/chapter4}
+  \include{chapters/chapter5}
+  \include{chapters/chapter6}
+
+
+
+%   %=== 参考文献 ===%
+%   % 使用 BibTeX
+  % \include{references/references}
+  \bibliography{paper}
+
+% %%===========================================================================%%
+% %%========================= 附件部分 ========================================%%
+% %%===========================================================================%%
+
+% %它不再对章进行自动编号，但不改变页码数字格式，不重设页码计数器
+% \backmatter
+
+
+
+%   %=== 致谢 ===%
+  \include{chapters/thanks}
+%   %=== 发表文章目录 ===%
+  \include{chapters/publications}
+
+%   %=== 学位论文独创性声明和学位论文使用授权声明 ===%
+  \include{Chapters/statements}
+
+%   %=== 学位论文诚信承诺书 ===%
+  \include{chapters/chengnuoshu}
+% 不要修改以下内容
+\input{preparations/statements}
+
+
+\end{document}

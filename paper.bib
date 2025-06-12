@@ -1,0 +1,124 @@
+@String(AAAI = {AAAI Conference on Artificial
+Intelligence})
+@String(ACCV  = {Asian Conference on Computer Vision})
+@String(ACMMM= {ACM International Conference on Multimedia})
+@String(AISTATS= {International Conference on Artificial Intelligence and Statistics})
+@String(BMVC= {British Machine Vision Conference})
+@String(CGF  = {Computer Graphics Forum})
+@String(CVM = {Computational Visual Media})
+@String(CVPR= {IEEE/CVF Computer Vision and Pattern Recognition Conference})
+@String(CVPRW= {IEEE Conference on Computer Vision and Pattern Recognition Workshop})
+@String(ECCV= {European Conference on
+Computer Vision})
+@String(ICASSP= {IEEE International Conference on Acoustics, Speech and Signal Processing})
+@String(ICCCI={International Conference on Computer Communication and the Internet})
+@String(ICCV   = {International Conference on Computer Vision})
+@String(ICIP = {IEEE International Conference on Image Processing})
+@String(ICLR = {International Conference on Learning Representations})
+@String(ICLRWU= {ICLR workshop on integration of deep neural models and differential equations})
+@String(ICME = {IEEE International Conference on
+Multimedia & Expo})
+@String(ICML={International Conference on Machine Learning})
+@String(ICPR = {International Conference on Pattern
+Recognition})
+@String(IJCAI = {International Joint Conference on
+Artificial Intelligence})
+@String(IJCNN={International Joint Conference on
+Neural Networks})
+@String(IJCV = {International Journal of Computer Vision})
+@String(IMPROVE={Proceedings of the International Conference on Image Processing and Vision Engineering})
+@String(ITC={IEEE Transactions on Cybernetics})
+@String(JCST  = {Journal of Computer Science and Technology})
+@String(JMA = {Journal of multivariate analysis})
+@String(JMLR={Journal of Machine Learning Research})
+@String(JORS={Journal of the Operational Research Society})
+@String(JOV = {J. Vis.})
+@String(ML={Machine Learning})
+@String(NIPS= {Conference on Neural
+Information Processing Systems})
+@String(NIPSWUFL= {NIPS workshop on deep learning and unsupervised feature learning})
+%% This BibTeX bibliography file was created using BibDesk.
+%% https://bibdesk.sourceforge.io/
+
+%% Created for QCC at 2023-09-22 20:02:20 +0800 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+%% This BibTeX bibliography file was created using BibDesk.
+%% https://bibdesk.sourceforge.io/
+
+%% Created for QCC at 2023-10-17 16:23:57 +0800 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+@String(PAMI = {IEEE Transactions on Pattern Analysis and Machine Intelligence})
+@String(PR   = {Pattern Recognition})
+@String(ProcIEEE={Proceedings of the IEEE})
+@String(SC={Science})
+@string(SIGGRAPH={ACM Special Interest Group on Computer Graphics})
+@String(SP={Statistics and Computing})
+@String(SPL = {IEEE Signal Processing Letters})
+@String(TCSVT = {IEEE Transactions on Circuits and Systems for Video Technology})
+@String(TIP  = {IEEE Transactions on Image Processing})
+@String(TIT={IEEE Transactions on Information Theory})
+@String(TMM  = {IEEE Transactions on Multimedia})
+@string(TNNLS={IEEE Transactions on Neural Networks and learning systems})
+@String(TOG= {ACM Transactions on Graphics})
+@String(TVC  = {The Visual Computer})
+@String(TVCG  = {IEEE Transactions on Visualization and Computer Graphics})
+@String(UAI={Uncertainty in Artificial Intelligence})
+@String(VR   = {IEEE Virtual Reality})
+@String(WACV={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision})
+
+
+@inproceedings{Song2021,
+	abstract = {Score-based diffusion models synthesize samples by reversing a stochastic process that diffuses data to noise, and are trained by minimizing a weighted combination of score matching losses. The log-likelihood of score-based diffusion models can be tractably computed through a connection to continuous normalizing flows, but log-likelihood is not directly optimized by the weighted combination of score matching losses. We show that for a specific weighting scheme, the objective upper bounds the negative log-likelihood, thus enabling approximate maximum likelihood training of score-based diffusion models. We empirically observe that maximum likelihood training consistently improves the likelihood of score-based diffusion models across multiple datasets, stochastic processes, and model architectures. Our best models achieve negative log-likelihoods of 2.83 and 3.76 bits/dim on CIFAR-10 and ImageNet 32 × 32 without any data augmentation, on a par with state-of-the-art autoregressive models on these tasks.},
+	author = {Yang Song and Conor Durkan and Iain Murray and Stefano Ermon},
+	issn = {10495258},
+	journal = NIPS,
+booktitle  = NIPS,
+	title = {Maximum Likelihood Training of Score-Based Diffusion Models},
+	volume = {2},
+	year = {2021}}
+
+
+@InProceedings{zhou2019lipschitz,
+  author       = {Zhou, Zhiming and Liang, Jiadong and Song, Yuxuan and Yu, Lantao and Wang, Hongwei and Zhang, Weinan and Yu, Yong and Zhang, Zhihua},
+  booktitle    = ICML,
+  title        = {Lipschitz generative adversarial nets},
+  organization = {PMLR},
+  pages        = {7584--7593},
+  volume       = {2019-June},
+  abstract     = {In this paper we show that generative adversarial networks (GANs) without restriction on the discriminative function space commonly suffer from the problem that the gradient produced by the discriminator is uninformative to guide the generator. By contrast, Wasserstein GAN (WGAN), where the discriminative function is restricted to 1-Lipschitz, does not suffer from such a gradient uninformativeness problem. We further show in the paper that the model with a compact dual form of Wasserstein distance, where the Lipschitz condition is relaxed, may also theoretically suffer from this issue. This implies the importance of Lipschitz condition and motivates us to study the general formulation of GANs with Lipschitz constraint, which leads to a new family of GANs that we call Lipschitz GANs (LGANs). We show that LGANs guarantee the existence and uniqueness of the optimal discriminative function as well as the existence of a unique Nash equilibrium. We prove that LGANs are generally capable of eliminating the gradient uninformativeness problem. According to our empirical analysis, LGANs arc more stable and generate consistently higher quality samples compared with WGAN.},
+  journal      = ICML,
+  year         = {2019},
+}
+
+@Article{zhang2020spectral,
+  author       = {Zhang, Zhihong and Zeng, Yangbin and Bai, Lu and Hu, Yiqun and Wu, Meihong and Wang, Shuai and Hancock, Edwin R},
+  journaltitle = PR,
+  title        = {Spectral bounding: Strictly satisfying the 1-Lipschitz property for generative adversarial networks},
+  doi          = {10.1016/j.patcog.2019.107179},
+  issn         = {00313203},
+  pages        = {107179},
+  volume       = {105},
+  abstract     = {Imposing the 1-Lipschitz constraint is a problem of key importance in the training of Generative Adversarial Networks (GANs), which has been proved to productively improve stability of GAN training. Although some interesting alternative methods have been proposed to enforce the 1-Lipschitz property, these existing approaches (e.g., weight clipping, gradient penalty (GP), and spectral normalization (SN)) are only partially successful. In this paper, we propose a novel method, which we refer to as spectral bounding (SB) to strictly enforce the 1-Lipschitz constraint. Our method adopts very cost-effective terms of both 1-norm and ∞-norm, and yet allows us to efficiently approximate the upper bound of spectral norms. In this way, our method provide important insights to the relationship between an alternative of strictly satisfying the Lipschitz property and explainable training stability improvements of GAN. Our proposed method thus significantly enhances the stability of GAN training and the quality of generated images. Extensive experiments are conducted, showing that the proposed method outperforms GP and SN on both CIFAR-10 and ILSVRC2015 (ImagetNet) dataset in terms of the standard inception score.},
+  bdsk-url-1   = {https://doi.org/10.1016/j.patcog.2019.107179},
+  journal      = PR,
+  publisher    = {Elsevier},
+  year         = {2020},
+}
+
+@article{ RJXB202407024,
+author = { 陆宇轩 and  刘泽禹 and  罗咏刚 and  邓森友 and  江天 and  马金燕 and  董胤蓬 },
+title = {基于生成对抗网络的目标检测黑盒迁移攻击算法},
+journal = {软件学报},
+volume = {35},
+number = {07},
+pages = {3531-3550},
+year = {2024},
+issn = {1000-9825},
+doi = {10.13328/j.cnki.jos.006937}
+}
