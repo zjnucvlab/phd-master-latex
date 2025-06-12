@@ -9,9 +9,13 @@
 
 
 paper.tex 论文的主文件
+
 main.tex 说明文件
-==重要文件，请勿删除preparations目录下的任何文件，里面包含的是字体、中文格式以及原创性申明等内容==
+
+**重要文件，请勿删除preparations目录下的任何文件，里面包含的是字体、中文格式以及原创性申明等内容**
+
 chapters/ 论文的主要目录
+
 figures/ 论文的图片目录。该目录可以根据自己的需要自行调整。
 
 如果要在本地搭建tex编译环境，请参阅main.tex里的配置流程。
@@ -19,6 +23,7 @@ figures/ 论文的图片目录。该目录可以根据自己的需要自行调�
 如果要在本地搭建overleaf环境（免费，在线版官方版overleaf编译大文件需要开通会员，不然编译会超时。），请参阅：
 该博文：
 https://blog.csdn.net/yitingren5764/article/details/121377630
+
 更多详细的操作和方法请参阅：
 https://www.notion.so/Overleaf-41925eff9a874b17afa385025b85ea6f
 
